@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Sriracha" rel="stylesheet">
+<script language="JavaScript">
+
+/*This function loads a Web doc into a new window*/
+function openNewWindow(docName){
+	newWind=window.open(docName)
+	}
+	
+/*This function hides any possible layers that we don't want to show*/
+/*then shows the layer group that we do want to show*/
+	function showLayers(layerID) {
+	hideAllLayers() /*Calls the hideAllLayers()" function*/
+	document.getElementById(layerID).style.visibility="visible"; /*Makes visible the layer(s) that we wish to show*/
+	}
+	
+/*This function hides any layers that we don't want to show*/
+	function hideAllLayers() {
+	document.getElementById("home").style.visibility="hidden"; /*We must account for any layers that could be showing (so far only one)*/
+	document.getElementById("about_us_page").style.visibility="hidden"; /*that we would want to be hidden at any time*/
+	document.getElementById("country_page").style.visibility="hidden";
+	document.getElementById("metal_page").style.visibility="hidden";
+	document.getElementById("rap_page").style.visibility="hidden";
+	document.getElementById("reggae_page").style.visibility="hidden";
+	document.getElementById("rock_page").style.visibility="hidden";
+	document.getElementById("soundtrack_page").style.visibility="hidden";
+	document.getElementById("faq_page").style.visibility="hidden"; /*That is what is being done here*/
+	document.getElementById("events_page").style.visibility="hidden";
+	document.getElementById("contact_page").style.visibility="hidden";
+	}
+	
+/*addOnload(imageFlip);
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_O.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_1.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_2.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_3.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_4.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_5.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_6.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_7.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_8.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_9.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_1O.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_11.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_12.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_13.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_14.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_15.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_16.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_17.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_18.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_19.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_20.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_21.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_22.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_23.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_24.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_25.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_26.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_27.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_28.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_29.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_3O.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_31.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_32.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_33.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_34.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_35.gif";
+
+currentSpins = new Spins(92,92);
+currentSpins.src = "spins/Spin_36.gif";
+
+              AnimeArray = new Array('spins/Spin_0.gif', 'spins/Spin_1.gif', 
+              'spins/Spin_2.gif', 'spins/Spin_3.gif', 'spins/Spin_4.gif', 
+              'spins/Spin_5.gif', 'spins/Spin_6.gif', 'spins/Spin_7.gif', 
+              'spins/Spin_8.gif', 'spins/Spin_9.gif', 'spins/Spin_10.gif', 
+              'spins/Spin_11.gif', 'spins/Spin_12.gif', 'spins/Spin_13.gif',
+              'spins/Spin_14.gif', 'spins/Spin_15.gif', 'spins/Spin_16.gif', 
+              'spins/Spin_17.gif', 'spins/Spin_18.gif', 'spins/Spin_19.gif', 
+              'spins/Spin_20.gif', 'spins/Spin_21.gif', 'spins/Spin_22.gif', 
+              'spins/Spin_23.gif', 'spins/Spin_24.gif', 'spins/Spin_25.gif', 
+              'spins/Spin_26.gif', 'spins/Spin_27.gif', 'spins/Spin_28.gif',
+              'spins/Spin_29.gif', 'spins/Spin_30.gif', 'spins/Spin_31.gif', 
+              'spins/Spin_32.gif', 'spins/Spin_33.gif', 'spins/Spin_34.gif', 
+              'spins/Spin_35.gif', 'spins/Spin_36.gif',); 
+
+              currentPosition = 0;
+
+              function imageFlip() {
+
+                if(currentPosition == AnimeArray.length-1) {
+                  currentPosition = 0;
+                } else {
+                  currentPosition++;
+                }
+
+              document.images['currentSpins'].src = AnimeArray[currentPosition];
+              
+              window.setTimeout('imageFlip()', 1000);
+              }
+*/           
+</script>
+<style>
+
+@font-face {
+    font-family: 'Sriracha', cursive;
+    src: url("https://fonts.googleapis.com/css?family=Sriracha");
+}
+
+#home {
+	visibility: visible;
+}
+
+#about_us_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#country_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#metal_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#rap_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#reggae_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#rock_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#soundtrack_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#faq_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#events_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+#contact_page {
+	visibility: hidden;
+	position: absolute;
+	top: 75px;
+	left: 450px;
+}
+
+body {
+	margin: 0;
+	background: url("Stage_Background.jpg")
+	no-repeat center center fixed; 
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover;  
+}
+
+#wrapper {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 2000px;
+}
+
+#header1 {
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-left: -95px;
+	background-color: #732673;
+	width: 100%;
+	height: 400px;
+}
+
+#header2 {
+	text-align: center;
+	border-bottom: 1px solid black;
+	background-color: white;
+	width: 106.5%;
+	height: 50px;
+	margin-left: -20px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header3 {
+	text-align: center;
+	border-bottom: 1px solid black;
+	background-color: white;
+	width: 106.5%;
+	height: 50px;
+	margin-left: -20px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header4 {
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	margin-left: 875px;
+	margin-top: 75px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header5 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	font-family: 'Sriracha', cursive;
+}
+
+#header6 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: 25px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header7 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: 55px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header8 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: -55px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header9 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: 35px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header10 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: 75px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header11 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: -25px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header12 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: 80px;
+	margin-top: -5px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header13 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: 25px;
+	font-family: 'Sriracha', cursive;
+}
+
+#header14 {
+	text-align: left;
+	font-size: 35px;
+	color: white;
+	z-index: 5;
+	margin-left: 25px;
+	font-family: 'Sriracha', cursive;
+}
+
+#nav_bar {
+	padding-top: 25px;
+	padding-left: 25px;
+	position: absolute;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#dropbtn1 {
+    background-color: #ffff00;
+    color: black;
+    padding: 18px 60px 18px 60px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+    font-family: 'Sriracha', cursive;
+}
+
+#dropbtn2 {
+    background-color: #ffff00;
+    color: black;
+    padding: 18px 60px 18px 60px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+    margin-left: 25px;
+    font-family: 'Sriracha', cursive;
+}
+
+#dropbtn3 {
+    background-color: #ffff00;
+    color: black;
+    padding: 18px 60px 18px 60px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+    margin-left: 25px;
+    font-family: 'Sriracha', cursive;
+}
+
+#dropbtn4 {
+    background-color: #ffff00;
+    color: black;
+    padding: 18px 60px 18px 60px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+    margin-left: 25px;
+    font-family: 'Sriracha', cursive;
+}
+
+#dropbtn5 {
+    background-color: #ffff00;
+    color: black;
+    padding: 18px 60px 18px 60px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+    margin-left: 25px;
+    font-family: 'Sriracha', cursive;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 25px;
+    z-index: 50;
+    font-family: 'Sriracha', cursive;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover #dropbtn1{
+    background-color: #732673;
+    color: white;
+}
+
+.dropdown:hover #dropbtn2{
+    background-color: #732673;
+    color: white;
+}
+
+.dropdown:hover #dropbtn3{
+    background-color: #732673;
+    color: white;
+}
+
+.dropdown:hover #dropbtn4{
+    background-color: #732673;
+    color: white;
+}
+
+.dropdown:hover #dropbtn5{
+    background-color: #732673;
+    color: white;
+}
+
+.description1{
+    margin-left: auto;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 4px solid yellow;
+    height: auto;
+    width: 610px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    background-color: white;
+    font-family: 'Sriracha', cursive;
+}
+
+.description2{
+    margin-left: -658px;
+    margin-top: 735px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 4px solid yellow;
+    height: auto;
+    width: 610px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    background-color: white;
+    font-family: 'Sriracha', cursive;
+}
+
+#box {
+	padding: 10px 10px 10px 10px;
+	margin-left: -350px;
+	background-color: white;
+	width: 910px;
+	height: 950px;
+	border: 4px solid yellow;
+}
+
+.description3{
+    margin-left: 15px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid yellow;
+    height: auto;
+    width: 410px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    background-color: #fff2cc;
+    font-family: 'Sriracha', cursive;
+}
+
+.description4{
+    margin-left: -450px;
+    margin-top: 465px;
+    margin-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid yellow;
+    height: auto;
+    width: 410px;
+    float: right;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    background-color: #fff2cc;
+    font-family: 'Sriracha', cursive;
+}
+
+.description5{
+    margin-left: 14px;
+    margin-top: -300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid yellow;
+    height: auto;
+    width: 410px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    background-color: #fff2cc;
+    font-family: 'Sriracha', cursive;
+}
+
+.description6 {
+	background-color: white;   
+	margin-left: -320px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 900px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description7 {
+	background-color: white;
+	margin-top: -65px;   
+	margin-left: -320px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 900px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description8 {
+	background-color: white;
+	margin-top: -45px;   
+	margin-left: -320px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 900px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description9 {
+	background-color: white;   
+	margin-left: -320px;
+	margin-top: -55px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 900px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description10 {
+	background-color: white;   
+	margin-left: -320px;
+	margin-top: -65px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 900px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description11 {
+	background-color: white;
+	margin-top: -65px;   
+	margin-left: -310px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 900px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description12{
+ 	margin-left: -355px;
+ 	margin-top: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 4px solid yellow;
+    height: auto;
+    width: 910px;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+    line-height: 45px;
+    background-color: white;
+    font-family: 'Sriracha', cursive;
+}
+
+.description13 {
+	background-color: white;
+	margin-top: 350px;   
+	margin-left: -685px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 450px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description14 {
+	background-color: white;
+	margin-top: -603px;   
+	margin-left: -150px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 450px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description15 {
+	background-color: white;
+	margin-top: -648px;   
+	margin-left: 465px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 450px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+.description16 {
+	background-color: white;
+	margin-top: -45px;   
+	margin-left: -88px;    
+	padding: 5px;    
+	border: 4px solid yellow;    
+	height: auto;    
+	width: 450px;	
+	float: center;    
+	text-align: center;
+	font-size: 25px;
+	line-height: 45px;
+	font-family: 'Sriracha', cursive;
+}
+
+#audio1 {
+	top: 850px;
+	left: -193px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio2 {
+	top: 850px;
+	left: 194px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio3 {
+	top: 1250px;
+	left: -193px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio4 {
+	top: 1250px;
+	left: 194px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio5 {
+	top: 855px;
+	left: -214px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio6 {
+	top: 855px;
+	left: 209px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio7 {
+	top: 1285px;
+	left: -214px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio8 {
+	top: 1285px;
+	left: 209px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio9 {
+	top: 850px;
+	left: -203px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio10 {
+	top: 850px;
+	left: 182px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio11 {
+	top: 1250px;
+	left: -203px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio12 {
+	top: 1250px;
+	left: 182px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio13 {
+	top: 795px;
+	left: -423px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio14 {
+	top: 795px;
+	left: -13px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio15 {
+	top: 795px;
+	left: 397px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio16 {
+	top: 1240px;
+	left: -213px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio17 {
+	top: 1240px;
+	left: 187px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio18 {
+	top: 805px;
+	left: -426px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio19 {
+	top: 805px;
+	left: -10px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio20 {
+	top: 805px;
+	left: 404px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio21 {
+	top: 1240px;
+	left: -243px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio22 {
+	top: 1240px;
+	left: 226px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio23 {
+	top: 765px;
+	left: -434px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio24 {
+	top: 765px;
+	left: -8px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio25 {
+	top: 765px;
+	left: 417px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio26 {
+	top: 1190px;
+	left: -223px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#audio27 {
+	top: 1190px;
+	left: 227px;
+	position: absolute;
+	border: 2px solid yellow;
+}
+
+#footer {
+	background-color: #732673;
+	color: white;
+	border-top: 1px solid black;
+	margin-left: -426px;
+	margin-right: -161px;
+	margin-top: 541px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	font-size: 25px;
+	float: left;
+	width: 160.8%;
+	font-family: 'Sriracha', cursive;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="header1">
+<a href="index.html">
+<img src="Second_Wave_Records_Logo_v2.png" style="position: absolute; top: 30px; left: 770px;">
+</a>
+</div>
+
+<div id="nav_bar">
+	<div class="dropdown">
+		<button id="dropbtn1" onClick="showLayers('about_us_page')">About Us</button>
+	</div>
+	
+<div class="dropdown">
+  <button id="dropbtn2">Catalogue</button>
+  	<div class="dropdown-content">
+    <a onClick="showLayers('country_page')">Country</a>
+    <a onClick="showLayers('metal_page')">Metal</a>
+    <a onClick="showLayers('rap_page')">Rap/Hip-Hop</a>
+    <a onClick="showLayers('reggae_page')">Reggae</a>
+    <a onClick="showLayers('rock_page')">Rock</a>
+    <a onClick="showLayers('soundtrack_page')">Soundtrack</a>
+	</div>
+</div>
+
+<div class="dropdown">
+	<button id="dropbtn3" onClick="showLayers('faq_page')">FAQ</button>
+</div>
+
+<div class="dropdown">
+	<button id="dropbtn4" onClick="showLayers('events_page')">Events</button>
+</div>
+
+<div class="dropdown">
+	<button id="dropbtn5" onClick="showLayers('contact_page')">Contact</button>
+</div>
+
+<div id="home">
+<div class="description1">
+<div id="header2">We have something for everyone!</div>
+Welcome all music fans! Are you looking for a sound that defines your identity? If so, then 
+you have discovered the greatest record store of all time! Here at Second Wave Records, we 
+provide you with the best variety that the music industry has to offer. We understand that
+the modern radio keeps playing the same material from time to time and feel that
+variety has been lost with the current generation. That is not the case here! With a range
+of different genres such as rock and reggae, Second Wave Records provides customers with
+some of the most well-known artists and we give them an opportunity to expand their
+tastes. I think we've told you enough, feel free to explore!
+</div>
+
+<div class="description2">
+<div id="header3">Sign up now for special coupons!</div>
+Do you feel that a record has a high price? Well worry no more, we can give you a discount!
+Second Wave Records offers various coupons with a discount that ranges from 10%-20%.
+Interested in signing up for these special offers? Head over to our contact page and call
+us to get yourself on our membership program.
+</div>
+
+<div id="header4">Check out these other record stores</div>
+
+<img src="Cheapo_Records_Link.gif" style="position: relative; left: 200px; top: 100px;
+cursor: pointer; cursor: hand;" onClick="openNewWindow('http://cheapodiscs.com/');"/>
+
+<img src="Rolling_Stones_Link.gif" style="position: relative; left: 210px; top: 250px; 
+cursor: pointer; cursor: hand;" 
+onClick="openNewWindow('http://www.rollingstonesmusic.com/');"/>
+
+<img src="Easy_Street_Records_Link.gif" style="position: relative; left: 120px; 
+top: 445px; cursor: pointer; cursor: hand;" 
+onClick="openNewWindow('http://easystreetonline.com/');"/>
+
+</div>
+
+<div id="about_us_page">
+	<div id="header5">
+	<h1>About Us</h1>
+	</div>
+	
+	<div id="box">
+	
+	<div class="description3">
+	Second Wave Records first opened in June of 1986 and had a mission to carry out for all
+	potential customers; to provide for them the best selection of what the music industry has
+	to offer. To help get this message across, it was decided that different genres should be
+	provided in order for people to see what appeals to them the most.
+	</div>
+	
+	<img src="Rock_Guitar.gif" style="position: relative; left: 50px; top: 50px;">
+	
+	<div class="description4">
+	In the 30 years of operation, we have had many different people come in to tell
+	us what they are looking for and believe it or not, we even expanded their tastes in the
+	world of music.
+	</div>
+	
+	<img src="Metal_Guitar.gif" style="position: relative; left: -100px; top: -150px;"> 
+	
+	<div class="description5">
+	Our store is open between the hours of 9:00am-10:00pm and is open 7 days a
+	week, with the exception of certain holidays.
+	</div>
+	
+	<img src="Acoustic_Country_Guitar.gif" style="position: relative; left: -50px; top: -95px;">
+	
+	</div>
+
+</div>
+
+<div id="country_page">
+	<div id="header6">
+	<h1>Country</h1>
+	</div>
+	
+	<div class="description6">
+	Welcome to the Country page. Those who enjoy the rural lifestyle will get a kick out
+	of what this genre has to offer. From Willie Nelson to Bob Dylan, this genre will
+	appeal to those who have roots in farming. We also include modern country artists
+	for the new generation. Below are some of the genre's highlights: feel free to play
+	the provided audio sample to get a taste of what country is all about.
+	</div>
+	
+	<img src="Bob_Dylan_The_Times_They_Are_a-Changin'.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -195px; top: 525px;">
+	
+	<div id="audio1">
+	<audio controls>	
+	<source src="The_Times_They_Are_A_Changin'.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Johnny_Cash_Boom_Chicka_Boom.jpg" style="position: absolute; border: 4px
+	solid yellow; left: 190px; top: 525px;">
+	
+	<div id="audio2">
+	<audio controls>	
+	<source src="Cat's_In_The_Cradle.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Kid_Rock_Born_Free.jpg" style="position: absolute; border: 4px solid
+	yellow; left: -195px; top: 925px;">
+	
+	<div id="audio3">
+	<audio controls>	
+	<source src="Born_Free.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Shotgun_Willie.jpg" style="position: absolute; border: 4px solid
+	yellow; left: 190px; top: 925px;">
+	
+	<div id="audio4">
+	<audio controls>	
+	<source src="Whiskey_River.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+</div>
+
+<div id="metal_page">
+	<div id="header7">
+	<h1>Metal</h1>
+	</div>
+	
+	<div class="description7">
+	Welcome to the Metal page. As a related genre to rock, you will want to head-bang at
+	bands who are tough and put on a good show. We've often had die-hard metal fans come
+	to us with their personal preferences in mind and this has allowed us to create
+	artwork that appeals to their tastes. The same fans also requested that we showcase
+	"The Big Four" on this webpage. Below are highlights of "The Big Four." Feel free to
+	play the provided audio sample to get a taste of what metal is all about.
+	</div>
+	
+	<img src="Anthrax_Spreading_The_Disease.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -245px; top: 495px;">
+	
+	<div id="audio5">
+	<audio controls>	
+	<source src="Madhouse.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Megadeth_Dystopia.jpg" style="position: absolute; border: 4px
+	solid yellow; left: 180px; top: 492px;">
+	
+	<div id="audio6">
+	<audio controls>	
+	<source src="The_Threat_Is_Real.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Metallica_Ride_The_Lightning.jpg" style="position: absolute; border: 4px solid
+	yellow; left: -245px; top: 925px;">
+	
+	<div id="audio7">
+	<audio controls>	
+	<source src="For_Whom_The_Bell_Tolls.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Slayer_Reign_in_blood.jpg" style="position: absolute; border: 4px solid
+	yellow; left: 180px; top: 925px;">
+	
+	<div id="audio8">
+	<audio controls>	
+	<source src="Angel_of_Death.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+</div>
+
+<div id="rap_page">
+	<div id="header8">
+	<h1>Rap/Hip-Hop</h1>
+	</div>
+	
+	<div class="description8">
+	Welcome to the Rap/Hip-Hop page. A popular genre with many people, this selection of
+	music will make you want to party like a gangsta. We have the toughest acts such as
+	the N.W.A and famous celebrities such as Will Smith. We mostly prefer old-school rap
+	here at Second Wave Records, but we are always on the lookout for fresh new voices.
+	Below are some of the genre's highlights: feel free to play the provided audio sample
+	to get a taste of what rap/hip-hop is all about.
+	</div>
+	
+	<img src="All_Eyez_On_Me.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -205px; top: 525px;">
+	
+	<div id="audio9">
+	<audio controls>	
+	<source src="California_Love.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="N.W.A._Straight_Outta_Compton.jpg" style="position: absolute; border: 4px
+	solid yellow; left: 180px; top: 525px;">
+	
+	<div id="audio10">
+	<audio controls>	
+	<source src="NWA_Police.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Soulja_Boy_Tell_Em_Dot_Com.jpg" style="position: absolute; border: 4px solid
+	yellow; left: -205px; top: 925px;">
+	
+	<div id="audio11">
+	<audio controls>	
+	<source src="Crank_That.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Will_Smith_Big_Willie_Style.jpg" style="position: absolute; border: 4px solid
+	yellow; left: 180px; top: 925px;">
+	
+	<div id="audio12">
+	<audio controls>	
+	<source src="Gettin_Jiggy_With_It.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+</div>
+
+<div id="reggae_page">
+	<div id="header9">
+	<h1>Reggae</h1>
+	</div>
+	
+	<div class="description9">
+	Welcome to the Reggae page. Need something to remind you of warmer climates? Then this
+	is the genre for you. Most reggae acts come from Jamaica and have left a huge impact
+	on the music scene. Though this genre is relatively unknown to some people, perhaps
+	we can help you get into it. Below are some of the genre's highlights: feel free to 
+	play the provided audio sample to get a taste of what reggae is all about. 
+	</div>
+	
+	<img src="Bob_Marley_Legend.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -425px; top: 480px;">
+	
+	<div id="audio13">
+	<audio controls>	
+	<source src="Is_This_Love.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Herbs_Sensitive_To_A_Smile.jpg" style="position: absolute; border: 4px solid
+	yellow; left: -15px; top: 481px;">
+	
+	<div id="audio14">
+	<audio controls>	
+	<source src="Sensitive_To_A_Smile.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Inner_Circle_Bad_to_the_Bone.jpg" style="position: absolute; border: 4px
+	solid yellow; left: 395px; top: 481px;">
+	
+	<div id="audio15">
+	<audio controls>	
+	<source src="Bad_Boys.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="The_Black_Seeds_On_The_Sun.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -215px; top: 925px;">
+	
+	<div id="audio16">
+	<audio controls>	
+	<source src="Fire.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Wailing_Souls_All_Over_The_World.png" style="position: absolute; border: 4px solid yellow;
+	left: 185px; top: 925px;">
+	
+	<div id="audio17">
+	<audio controls>	
+	<source src="Shark_Attack.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+</div>
+
+<div id="rock_page">
+	<div id="header10">
+	<h1>Rock</h1>
+	</div>
+	
+	<div class="description10">
+	Welcome to the Rock page. When we first opened in 1986, this was one of the first
+	genres we ever sold to the public. Our selection continues to expand with various
+	favorites and plenty of new bands to discover. We also endorse the message that
+	"Rock isn't dead" because we also sell bands from various countries. Below are some of
+	the genre's highlights: feel free to play the provided audio sample to get a taste of
+	what rock is all about.
+	</div>
+	
+	<img src="AC_DC_Back_In_Black.png" style="position: absolute; border: 4px solid yellow;
+	left: -428px; top: 490px;">
+	
+	<div id="audio18">
+	<audio controls>	
+	<source src="Shoot_To_Thrill.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Foo_Fighters_Wasting_Light.jpg" style="position: absolute; border: 4px solid
+	yellow; left: -15px; top: 491px;">
+	
+	<div id="audio19">
+	<audio controls>	
+	<source src="These_Days.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Guns_n_Roses_Use_Your_Illusion_II.jpg" style="position: absolute; border: 4px
+	solid yellow; left: 402px; top: 491px;">
+	
+	<div id="audio20">
+	<audio controls>	
+	<source src="You_Could_Be_Mine.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="In_Utero_Nirvana.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -245px; top: 925px;">
+	
+	<div id="audio21">
+	<audio controls>	
+	<source src="RM.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Yield_Pearl_Jam.jpg" style="position: absolute; border: 4px solid yellow;
+	left: 205px; top: 925px;">
+	
+	<div id="audio22">
+	<audio controls>	
+	<source src="Do_The_Evolution.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+</div>
+
+<div id="soundtrack_page">
+	<div id="header11">
+	<h1>Soundtrack</h1>
+	</div>
+	
+	<div class="description11">
+	Welcome to the Soundtrack page. Movie fans rejoice! Your favorite film scores are
+	available here at Second Wave Records. From Star Wars to Lord of the Rings, the world
+	of film has many memorable scores for people to discover. You never known, we might
+	have rare records that are discontinued. Below are some of the genre's highlights: feel
+	free to play the provided audio sample to get a taste of what soundtrack is all about.
+	</div>
+	
+	<img src="King_Kong_OST.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -435px; top: 450px;">
+	
+	<div id="audio23">
+	<audio controls>	
+	<source src="KK_OST.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="LOTR_TFOTR.jpg" style="position: absolute; border: 4px solid
+	yellow; left: -10px; top: 451px;">
+	
+	<div id="audio24">
+	<audio controls>	
+	<source src="Concerning_Hobbits.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="Mad_Max_Fury_Road_OST.jpg" style="position: absolute; border: 4px
+	solid yellow; left: 415px; top: 451px;">
+	
+	<div id="audio25">
+	<audio controls>	
+	<source src="MMFR_OST.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="The_Thin_Red_Line_Soundtrack.jpg" style="position: absolute; border: 4px solid yellow;
+	left: -225px; top: 875px;">
+	
+	<div id="audio26">
+	<audio controls>	
+	<source src="TTRL_OST.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+	<img src="War_Of_The_Worlds_OST.jpg" style="position: absolute; border: 4px solid yellow;
+	left: 225px; top: 875px;">
+	
+	<div id="audio27">
+	<audio controls>	
+	<source src="WOTW_OST.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+	
+</div>	
+
+<div id="faq_page">
+	<div id="header12">
+	<h1>FAQ</h1>
+	</div>
+	
+	<div class="description12">
+	Q: Do you have other locations?
+	<br>
+	A: Our only location is currently in Woodbury, MN
+	<br>
+	<br>
+	Q: Do you sell records on the web?
+	<br>
+	A: We showcase highlights of different genres, but we don't sell our inventory on the
+	web
+	<br>
+	<br>
+	Q: Do you sell gift cards?
+	<br>
+	A: Yes we do. Gift cards range from $10-$50
+	<br>
+	<br>
+	Q: How does your return policy work?
+	<br>
+	A: Any used purchases are 100% exchangeable with the original receipt. New products
+	are not exchangeable
+	<br>
+	<br>
+	Q: How often do you hire people?
+	<br>
+	A: We hire people every 2-3 months
+	<br>
+	<br>
+	Q: Do you sell both used and new copies of records?
+	<br>
+	A: Yes
+	<br>
+	<br>
+	Q: Can you clean scratched materials?
+	<br>
+	A: Yes. We have excellent materials to help restore anything that has been damaged
+	<br>
+	<br>
+	Q: Do you sell movies/TV shows?
+	<br>
+	A: No
+	</div>
+
+</div>
+
+<div id="events_page">
+	<div id="header13">
+	<h1>Events</h1>
+	</div>
+	
+	<img src="Bob_Marley.jpg" style="position: absolute; left: -630px; top: 175px;
+	width: 350px; height: 275px;">
+	
+	<div class="description13">
+	Remember Bob Marley? We here at Second Wave Records like to pay tribute to him every
+	year on May 11th. Marley made a huge impact on the reggae genre and we often like
+	to show our customers what it meant to music fans worldwide. During this event, we
+	play his music 24/7 and showcase various memorabilia. We've often had some customers
+	become new fans because of this. Want to show your support for the Bob Marley Tribute?
+	Feel free to stop by during store hours when you have time.
+	</div>
+	
+	<img src="Nirvana.jpg" style="position: absolute; left: -170px; top: 175px;
+	height: 275px;">
+	
+	<div class="description14">
+	Ah the early 90s! A time when things were looking very bright after the 80s wrapped
+	up. One of the best things to come out of that decade was Nirvana. As the pioneers of
+	grunge music, this band helped paved the way for an alternative sound heard in bands
+	such as Pearl Jam, Soundgarden and Stone Temple Pilots. We here at Second Wave
+	Records show our appreciation every April 5th by celebrating the band's impact. Want
+	to show your support for Nirvana Appreciation Day? Feel free to stop by during store
+	hours when you have time.
+	</div>
+	
+	<img src="Rap_Group.jpg" style="position: absolute; left: 435px; top: 175px;
+	height: 275px;">
+	
+	<div class="description15">
+	RapFest is probably our most ambitious event. At this event, which is held every 
+	August 8th, we showcase the most famous figures in the world of rap music and what 
+	they did to pioneer the genre. Since there are so many artists to highlight, we've 
+	often had multiple fanbases giving us feedback on how to make the event bigger than 
+	before. What really defines this event is the rap battles. At the event, you can 
+	challenge others with your skills and see if you can become the champion. Want to show 
+	your support for RapFest? Feel free to stop by during store hours when you have time.
+	</div>
+	
+</div>
+
+<div id="contact_page">
+	<div id="header14">
+	<h1>Contact</h1>
+	</div>
+	
+	<div class="description16">
+	Feel free to contact us using the following form below. Type in your name, email
+	address and phone number and we'll inform you about any questions you may have for us.
+	It might take us 1-2 days to respond back to you, so hang tight. Also, we'll give you
+	a shoutout on Twitter, just type in your account name and we'll show the world your
+	appreciation for our business. We look forward to helping out your needs on what you 
+	are looking for here at Second Wave Records.
+	</div>
+	
+<form action="/action_page.php">
+  <fieldset style="color: white; margin-top: 80px; margin-left: -63px; width: 250px;
+  font-size: 25px;">
+Name:<br>
+<input type="text" name="name" size="50"><br>
+E-mail:<br>
+<input type="text" name="mail" size="50"><br>
+Phone Number:<br>
+<input type="text" name="phone" size="50"><br>
+Twitter Account:<br>
+<input type="text" name="tweet" size="50"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send" style="width: 150px; font-size: 20px; margin-left: 125px;">
+<input type="reset" value="Reset" style="width: 150px; font-size: 20px; margin-left: 125px; margin-top: 15px;">
+  </fieldset>
+</form>
+	
+</div>
+
+<div id="footer">
+<p>&copy;2016 Second Wave Records</p>
+<img name="currentSpins" src="spins/Spin_0.gif" style="position: absolute; right: -290px; 
+top: 1435px;">
+</div>
+
+</div>
+
+</body>
+</html>
