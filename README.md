@@ -1,1 +1,2 @@
 # Second-Wave-Records
+This project was produced in the course Web Design with JavaScript and jQuery. The focus of the project was the coding, not the design. This music record website incorporates the hide/show layer function, which is a part of JavaScript. While one layer of the website is showing, while the others layers are hidden. On each landing page, albums are shown for each music category. When you click the play bar, you hear sample music for that album (HTML5). The home page contains links (HTML5) to record store websites.
